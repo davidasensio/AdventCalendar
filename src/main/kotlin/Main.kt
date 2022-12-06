@@ -1,7 +1,25 @@
-fun main(args: Array<String>) {
-    println("Hello Advent Calendar!")
+import days2022.Day01
+import days2022.Day04
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+fun main(args: Array<String>) {
+    println("Hello Advent Calendar 2022!\n")
+
+    val days = listOf(
+        Day01
+    )
+
+    days.forEach { printDay(it) }
+
+    println(Day04.title)
+}
+
+private fun printDay(day: Day) {
+    val header = "--- Day ${day.number.toString().padStart(2, '0')}: ${day.title} ---"
+    val footer = "-".repeat(header.length)
+
+    println(header)
+    println("|> Part 1: ${day.partOne()}")
+    println("|> Part 2: ${day.partTwo()}")
+    println(footer)
+    println()
 }
