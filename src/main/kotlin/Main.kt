@@ -1,11 +1,15 @@
-import days2022.Day01
-import days2022.Day04
+import days2022.*
 
 fun main(args: Array<String>) {
-    println("Hello Advent Calendar 2022!\n")
+    println("Hello Advent Calendar!\n")
 
     val days = listOf(
-        Day01
+        Day01,
+        Day02,
+        Day03,
+        Day04,
+        Day05,
+        Day06,
     )
 
     days.forEach { printDay(it) }
