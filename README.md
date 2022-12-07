@@ -26,6 +26,7 @@ This repository contains solutions to Advent of Code puzzles. Solutions are all 
 | ✔ 04 | Camp Cleanup            |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2022/Day04.kt) |
 | ✔ 05 | Supply Stacks           |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2022/Day05.kt) |
 | ✔ 06 | Supply Stacks           |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2022/Day06.kt) |
+| ✔ 07 | No Space Left On Device |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2022/Day07.kt) |
 
 ### Links
 
