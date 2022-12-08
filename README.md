@@ -14,19 +14,20 @@ This repository contains solutions to Advent of Code puzzles. Solutions are all 
 
 ### Year 2022
 
-![Current day](https://img.shields.io/badge/Day-6-blue)
-![Stars obtained](https://img.shields.io/badge/Stars%20Obtained%20⭐-6-yellow)
-![Days completed](https://img.shields.io/badge/Days%20Completed-6-green)
+![Current day](https://img.shields.io/badge/Day-8-blue)
+![Stars obtained](https://img.shields.io/badge/Stars%20Obtained%20⭐-16-yellow)
+![Days completed](https://img.shields.io/badge/Days%20Completed-8-green)
 
-| Day  | Title                   | Part 1 | Part 2 | Code                                         |
-|------|-------------------------|:------:|:------:|----------------------------------------------|
-| ✔ 01 | Calorie Counting        |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2022/Day01.kt) |
-| ✔ 02 | Rock Paper Scissors     |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2022/Day02.kt) |
+| Day  | Title                  | Part 1 | Part 2 | Code                                         |
+|------|------------------------|:------:|:------:|----------------------------------------------|
+| ✔ 01 | Calorie Counting       |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2022/Day01.kt) |
+| ✔ 02 | Rock Paper Scissors    |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2022/Day02.kt) |
 | ✔ 03 | Rucksack Reorganization |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2022/Day03.kt) |
-| ✔ 04 | Camp Cleanup            |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2022/Day04.kt) |
-| ✔ 05 | Supply Stacks           |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2022/Day05.kt) |
-| ✔ 06 | Supply Stacks           |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2022/Day06.kt) |
+| ✔ 04 | Camp Cleanup           |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2022/Day04.kt) |
+| ✔ 05 | Supply Stacks          |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2022/Day05.kt) |
+| ✔ 06 | Supply Stacks          |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2022/Day06.kt) |
 | ✔ 07 | No Space Left On Device |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2022/Day07.kt) |
+| ✔ 08 | Treetop Tree House |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2022/Day08.kt) |
 
 ### Links
 
