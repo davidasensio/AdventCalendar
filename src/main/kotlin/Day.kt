@@ -1,11 +1,17 @@
 import java.io.File
 
-abstract class Day(val number: Int, val title: String) {
+abstract class Day(val number: Int, val title: String, val debug: Boolean = false) {
     protected val inputString by lazy { InputReader.readAsString(number) }
     protected val inputStringList by lazy { InputReader.readAsList(number) }
 
-    abstract fun partOne() : Any
-    abstract fun partTwo() : Any
+    abstract fun partOne(): Any
+    abstract fun partTwo(): Any
+
+    fun logLn(message: String = "") {
+        if (debug) {
+            println(message)
+        }
+    }
 
     override fun toString(): String {
         return """
