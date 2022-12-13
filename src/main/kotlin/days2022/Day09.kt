@@ -10,11 +10,11 @@ fun main() {
     println(Day09.toString())
 }
 
-object Day09 : Day(9, "Rope Bridge", false) {
+object Day09 : Day(9, "Rope Bridge", true) {
     private const val START = 's'
     private const val HEAD_VISIT = 'H'
     private const val TAIL_VISIT = 'T'
-    private const val MAP_SIZE = 700
+    private const val MAP_SIZE = 32
     private val ropeMap = Array(MAP_SIZE) { CharArray(MAP_SIZE) { '.' } }
 
     private enum class Direction { L, R, U, D }
@@ -26,6 +26,7 @@ object Day09 : Day(9, "Rope Bridge", false) {
     }
 
     override fun partOne(): Any {
+        return false
         val startX = MAP_SIZE / 2
         val startY = MAP_SIZE / 2
         var hX = startX
@@ -67,8 +68,8 @@ object Day09 : Day(9, "Rope Bridge", false) {
                 logLn()
                 // println("Move: ${move.direction} ${move.times}")
             }
-            maxSizeX = max(hX,maxSizeX)
-            maxSizeY = max(hY,maxSizeY)
+            maxSizeX = max(hX, maxSizeX)
+            maxSizeY = max(hY, maxSizeY)
 
             println("Progress: $index / $movesSize (Current size = $maxSizeX x $maxSizeY)")
         }
@@ -78,7 +79,69 @@ object Day09 : Day(9, "Rope Bridge", false) {
     }
 
     override fun partTwo(): Any {
-        return false
+        val startX = MAP_SIZE / 2
+        val startY = MAP_SIZE / 2
+        var hX = startX
+        var hY = startY
+        val tailArray = Array(9) { intArrayOf(hX, hY) }
+//        var tX = startX
+//        var tY = startY
+        var maxSizeX = 0
+        var maxSizeY = 0
+
+        ropeMap[hY][hX] = START
+        val movesSize = moves.size
+        moves.forEachIndexed { index, move ->
+            repeat(move.times) {
+                when (move.direction) {
+                    Direction.L -> hX--
+                    Direction.R -> hX++
+                    Direction.U -> hY--
+                    Direction.D -> hY++
+                }
+
+                var precedentPointX = hX
+                var precedentPointY = hY
+                tailArray.forEachIndexed { index, tailPosition ->
+                    var tX = tailPosition.first()
+                    var tY = tailPosition.last()
+                    if (!isHeadAdjacentToTailInMap(Point(precedentPointX, precedentPointY), Point(tX, tY))) {
+                        precedentPointX = tX
+                        precedentPointY = tY
+                        if (hY == tY) { // Same row
+                            if (hX > tX) tX++ else tX--
+                        } else if (hX == tX) { // Same column
+                            if (hY > tY) tY++ else tY--
+                        } else {
+                            if (abs(hY - tY) > 1) { // Two rows of difference
+                                tX = hX
+                                if (hY > tY) tY++ else tY--
+                            } else { // Two columns of difference
+                                tY = hY
+                                if (hX > tX) tX++ else tX--
+                            }
+                        }
+                    }
+                    if (index == tailArray.lastIndex) {
+                        ropeMap[tY][tX] = TAIL_VISIT //(index + 1).toString().toCharArray().first()
+                    }
+                    tailArray[index] = intArrayOf(tX, tY)
+                }
+
+                //ropeMap[hY][hX] = HEAD_VISIT
+//                ropeMap[tY][tX] = TAIL_VISIT
+                logLn(getRopeMapAsString())
+                logLn()
+                // println("Move: ${move.direction} ${move.times}")
+            }
+            maxSizeX = max(hX, maxSizeX)
+            maxSizeY = max(hY, maxSizeY)
+
+            println("Progress: $index / $movesSize (Current size = $maxSizeX x $maxSizeY)")
+        }
+        println(getRopeMapAsString())
+        val tailVisits = countTailVisits()
+        return "Total position Tail visited are $tailVisits"
     }
 
     private fun countTailVisits() = ropeMap.sumOf {
