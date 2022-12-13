@@ -14,9 +14,9 @@ This repository contains solutions to Advent of Code puzzles. Solutions are all 
 
 ### Year 2022
 
-![Current day](https://img.shields.io/badge/Day-9-blue)
-![Stars obtained](https://img.shields.io/badge/Stars%20Obtained%20⭐-17-yellow)
-![Days completed](https://img.shields.io/badge/Days%20Completed-8-green)
+![Current day](https://img.shields.io/badge/Day-10-blue)
+![Stars obtained](https://img.shields.io/badge/Stars%20Obtained%20⭐-19-yellow)
+![Days completed](https://img.shields.io/badge/Days%20Completed-10-green)
 
 | Day  | Title                   | Part 1 | Part 2 | Code                                         |
 |------|-------------------------|:------:|:------:|----------------------------------------------|
@@ -28,7 +28,8 @@ This repository contains solutions to Advent of Code puzzles. Solutions are all 
 | ✔ 06 | Supply Stacks           |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2022/Day06.kt) |
 | ✔ 07 | No Space Left On Device |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2022/Day07.kt) |
 | ✔ 08 | Treetop Tree House      |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2022/Day08.kt) |
-| ✔ 09 | Rope Bridge             |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2022/Day09.kt) |
+| ✔ 09 | Rope Bridge             |   ⭐    |        | [![Code]](src/main/kotlin/days2022/Day09.kt) |
+| ✔ 10 | Cathode-Ray Tube        |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2022/Day10.kt) |
 
 ### Links
 
