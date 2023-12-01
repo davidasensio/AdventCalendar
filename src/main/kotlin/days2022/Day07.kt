@@ -27,7 +27,7 @@ private class Directory(val name: String, val contents: MutableSet<Any>) {
     }
 }
 
-object Day07 : Day(7, "No Space Left On Device") {
+object Day07 : Day(2022, 7, "No Space Left On Device") {
     private const val SIZE_LIMIT = 100000
     private const val SIZE_AVAILABLE = 70000000
     private const val SIZE_REQUIRED = 30000000

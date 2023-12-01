@@ -6,7 +6,7 @@ fun main() {
     println(Day03.toString())
 }
 
-object Day03 : Day(3, "Rucksack Reorganization") {
+object Day03 : Day(2022, 3, "Rucksack Reorganization") {
 
     override fun partOne(): Any {
         var sum = 0

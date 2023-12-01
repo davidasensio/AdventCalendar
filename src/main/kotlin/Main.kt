@@ -18,7 +18,7 @@ fun main(args: Array<String>) {
 }
 
 private fun printDay(day: Day) {
-    val header = "--- Day ${day.number.toString().padStart(2, '0')}: ${day.title} ---"
+    val header = "--- Day ${day.day.toString().padStart(2, '0')}: ${day.title} ---"
     val footer = "-".repeat(header.length)
 
     println(header)

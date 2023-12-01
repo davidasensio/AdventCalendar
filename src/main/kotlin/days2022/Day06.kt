@@ -6,7 +6,7 @@ fun main() {
     println(Day06.toString())
 }
 
-object Day06 : Day(6, "Tuning Trouble") {
+object Day06 : Day(2022, 6, "Tuning Trouble") {
     private const val START_PACKET_LENGTH = 4
     private const val START_MESSAGE_LENGTH = 14
 

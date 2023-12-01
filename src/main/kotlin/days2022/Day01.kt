@@ -7,7 +7,7 @@ fun main() {
     println(Day01.toString())
 }
 
-object Day01 : Day(1, "Calorie Counting") {
+object Day01 : Day(2022, 1, "Calorie Counting") {
 
     override fun partOne(): Any {
         inputString.let {

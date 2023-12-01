@@ -6,7 +6,7 @@ fun main() {
     println(Day08.toString())
 }
 
-object Day08 : Day(8, "Treetop Tree House") {
+object Day08 : Day(2022, 8, "Treetop Tree House") {
     private val x: Int = inputStringList.first().length
     private val y: Int = inputStringList.size
     private val mapOfTrees = Array(y) { IntArray(x) }

@@ -1,8 +1,8 @@
 import java.io.File
 
-abstract class Day(val number: Int, val title: String, val debug: Boolean = false) {
-    protected val inputString by lazy { InputReader.readAsString(number) }
-    protected val inputStringList by lazy { InputReader.readAsList(number) }
+abstract class Day(val year: Int, val day: Int, val title: String, val debug: Boolean = false) {
+    protected val inputString by lazy { InputReader.readAsString(year, day) }
+    protected val inputStringList by lazy { InputReader.readAsList(year, day) }
 
     abstract fun partOne(): Any
     abstract fun partTwo(): Any
@@ -22,12 +22,12 @@ abstract class Day(val number: Int, val title: String, val debug: Boolean = fals
 }
 
 private object InputReader {
-    fun readAsString(number: Int) = fileFromResources(number).readText()
-    fun readAsList(number: Int) = fileFromResources(number).readLines()
+    fun readAsString(year: Int, number: Int) = fileFromResources(year, number).readText()
+    fun readAsList(year: Int, number: Int) = fileFromResources(year, number).readLines()
 
-    private fun fileFromResources(number: Int): File {
+    private fun fileFromResources(year: Int, number: Int): File {
         val formattedNumber = number.toString().padStart(2, '0')
-        val filename = "Day$formattedNumber.txt"
+        val filename = "$year/Day$formattedNumber.txt"
         return File(javaClass.getResource(filename)?.toURI() ?: error("No input file found for day $number!"))
 
     }

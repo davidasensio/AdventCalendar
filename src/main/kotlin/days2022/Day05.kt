@@ -6,7 +6,7 @@ fun main() {
     println(Day05.toString())
 }
 
-object Day05 : Day(5, "Supply Stacks") {
+object Day05 : Day(2022, 5, "Supply Stacks") {
     private const val MOVES_SEPARATOR = "\n\n"
     private const val POSITION_SEPARATOR = "\n 1"
     private const val CRATE_LENGTH = 4

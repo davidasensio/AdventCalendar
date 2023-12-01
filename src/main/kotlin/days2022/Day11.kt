@@ -6,7 +6,7 @@ fun main() {
     println(Day11.toString())
 }
 
-object Day11 : Day(11, "Monkey in the Middle", true) {
+object Day11 : Day(2022, 11, "Monkey in the Middle", true) {
     private val monkeys: List<Monkey>
     val rounds = 20
 

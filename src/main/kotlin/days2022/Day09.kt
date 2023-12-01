@@ -10,7 +10,7 @@ fun main() {
     println(Day09.toString())
 }
 
-object Day09 : Day(9, "Rope Bridge", true) {
+object Day09 : Day(2022, 9, "Rope Bridge", true) {
     private const val START = 's'
     private const val HEAD_VISIT = 'H'
     private const val TAIL_VISIT = 'T'

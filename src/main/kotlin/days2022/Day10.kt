@@ -6,7 +6,7 @@ fun main() {
     println(Day10.toString())
 }
 
-object Day10 : Day(10, "Cathode-Ray Tube", false) {
+object Day10 : Day(2022, 10, "Cathode-Ray Tube", false) {
     private val instructionsPerCycle: List<Instruction>
 
     init {
