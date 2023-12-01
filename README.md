@@ -18,9 +18,9 @@ This repository contains solutions to Advent of Code puzzles. Solutions are all 
 
 ### Year 2023
 
-![Current day](https://img.shields.io/badge/Day-10-blue)
-![Stars obtained](https://img.shields.io/badge/Stars%20Obtained%20⭐-19-yellow)
-![Days completed](https://img.shields.io/badge/Days%20Completed-10-green)
+![Current day](https://img.shields.io/badge/Day-1-blue)
+![Stars obtained](https://img.shields.io/badge/Stars%20Obtained%20⭐-2-yellow)
+![Days completed](https://img.shields.io/badge/Days%20Completed-1-green)
 
 | Day  | Title                   | Part 1 | Part 2 | Code                                         |
 |------|-------------------------|:------:|:------:|----------------------------------------------|
