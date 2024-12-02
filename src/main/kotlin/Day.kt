@@ -7,6 +7,8 @@ abstract class Day(val year: Int, val day: Int, val title: String, val debug: Bo
     abstract fun partOne(): Any
     abstract fun partTwo(): Any
 
+    open fun beforeParts(): Any = Unit
+
     fun logLn(message: String = "") {
         if (debug) {
             println(message)
@@ -14,6 +16,7 @@ abstract class Day(val year: Int, val day: Int, val title: String, val debug: Bo
     }
 
     override fun toString(): String {
+        beforeParts()
         return """
             Part One: ${partOne()}
             Part Two: ${partTwo()}
