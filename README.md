@@ -21,15 +21,16 @@ This repository contains solutions to Advent of Code puzzles. Solutions are all 
 
 ### Year 2024
 
-![Current day](https://img.shields.io/badge/Day-3-blue)
-![Stars obtained](https://img.shields.io/badge/Stars%20Obtained%20⭐-6-yellow)
-![Days completed](https://img.shields.io/badge/Days%20Completed-3-green)
+![Current day](https://img.shields.io/badge/Day-4-blue)
+![Stars obtained](https://img.shields.io/badge/Stars%20Obtained%20⭐-8-yellow)
+![Days completed](https://img.shields.io/badge/Days%20Completed-4-green)
 
 | Day  | Title              | Part 1 | Part 2 | Code                                         |
 |------|--------------------|:------:|:------:|----------------------------------------------|
 | ✔ 01 | Historian Hysteria |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2024/Day01.kt) |
 | ✔ 02 | Red-Nosed Reports  |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2024/Day02.kt) |
-| ✔ 03 | Mull It Over  |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2024/Day03.kt) |
+| ✔ 03 | Mull It Over       |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2024/Day03.kt) |
+| ✔ 04 | Ceres Search       |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2024/Day04.kt) |
 
 ### Links
 
