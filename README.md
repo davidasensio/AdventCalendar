@@ -21,9 +21,9 @@ This repository contains solutions to Advent of Code puzzles. Solutions are all 
 
 ### Year 2024
 
-![Current day](https://img.shields.io/badge/Day-5-blue)
-![Stars obtained](https://img.shields.io/badge/Stars%20Obtained%20⭐-10-yellow)
-![Days completed](https://img.shields.io/badge/Days%20Completed-5-green)
+![Current day](https://img.shields.io/badge/Day-6-blue)
+![Stars obtained](https://img.shields.io/badge/Stars%20Obtained%20⭐-12-yellow)
+![Days completed](https://img.shields.io/badge/Days%20Completed-6-green)
 
 | Day  | Title              | Part 1 | Part 2 | Code                                         |
 |------|--------------------|:------:|:------:|----------------------------------------------|
@@ -32,6 +32,7 @@ This repository contains solutions to Advent of Code puzzles. Solutions are all 
 | ✔ 03 | Mull It Over       |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2024/Day03.kt) |
 | ✔ 04 | Ceres Search       |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2024/Day04.kt) |
 | ✔ 05 | Print Queue        |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2024/Day05.kt) |
+| ✔ 06 | Guard Gallivant    |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2024/Day06.kt) |
 
 ### Links
 
