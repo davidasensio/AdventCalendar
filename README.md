@@ -21,19 +21,20 @@ This repository contains solutions to Advent of Code puzzles. Solutions are all 
 
 ### Year 2024
 
-![Current day](https://img.shields.io/badge/Day-7-blue)
-![Stars obtained](https://img.shields.io/badge/Stars%20Obtained%20⭐-14-yellow)
-![Days completed](https://img.shields.io/badge/Days%20Completed-7-green)
+![Current day](https://img.shields.io/badge/Day-8-blue)
+![Stars obtained](https://img.shields.io/badge/Stars%20Obtained%20⭐-16-yellow)
+![Days completed](https://img.shields.io/badge/Days%20Completed-8-green)
 
-| Day  | Title              | Part 1 | Part 2 | Code                                         |
-|------|--------------------|:------:|:------:|----------------------------------------------|
-| ✔ 01 | Historian Hysteria |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2024/Day01.kt) |
-| ✔ 02 | Red-Nosed Reports  |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2024/Day02.kt) |
-| ✔ 03 | Mull It Over       |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2024/Day03.kt) |
-| ✔ 04 | Ceres Search       |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2024/Day04.kt) |
-| ✔ 05 | Print Queue        |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2024/Day05.kt) |
-| ✔ 06 | Guard Gallivant    |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2024/Day06.kt) |
-| ✔ 07 | Bridge Repair      |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2024/Day07.kt) |
+| Day  | Title                 | Part 1 | Part 2 | Code                                         |
+|------|-----------------------|:------:|:------:|----------------------------------------------|
+| ✔ 01 | Historian Hysteria    |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2024/Day01.kt) |
+| ✔ 02 | Red-Nosed Reports     |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2024/Day02.kt) |
+| ✔ 03 | Mull It Over          |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2024/Day03.kt) |
+| ✔ 04 | Ceres Search          |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2024/Day04.kt) |
+| ✔ 05 | Print Queue           |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2024/Day05.kt) |
+| ✔ 06 | Guard Gallivant       |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2024/Day06.kt) |
+| ✔ 07 | Bridge Repair         |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2024/Day07.kt) |
+| ✔ 08 | Resonant Collinearity |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2024/Day08.kt) |
 
 ### Links
 
