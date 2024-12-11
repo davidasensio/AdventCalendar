@@ -21,9 +21,9 @@ This repository contains solutions to Advent of Code puzzles. Solutions are all 
 
 ### Year 2024
 
-![Current day](https://img.shields.io/badge/Day-8-blue)
-![Stars obtained](https://img.shields.io/badge/Stars%20Obtained%20⭐-16-yellow)
-![Days completed](https://img.shields.io/badge/Days%20Completed-8-green)
+![Current day](https://img.shields.io/badge/Day-9-blue)
+![Stars obtained](https://img.shields.io/badge/Stars%20Obtained%20⭐-17-yellow)
+![Days completed](https://img.shields.io/badge/Days%20Completed-9-green)
 
 | Day  | Title                 | Part 1 | Part 2 | Code                                         |
 |------|-----------------------|:------:|:------:|----------------------------------------------|
@@ -35,6 +35,7 @@ This repository contains solutions to Advent of Code puzzles. Solutions are all 
 | ✔ 06 | Guard Gallivant       |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2024/Day06.kt) |
 | ✔ 07 | Bridge Repair         |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2024/Day07.kt) |
 | ✔ 08 | Resonant Collinearity |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2024/Day08.kt) |
+| ✔ 09 | Disk Fragmenter       |   ⭐    |        | [![Code]](src/main/kotlin/days2024/Day09.kt) |
 
 ### Links
 
