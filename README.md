@@ -21,9 +21,9 @@ This repository contains solutions to Advent of Code puzzles. Solutions are all 
 
 ### Year 2024
 
-![Current day](https://img.shields.io/badge/Day-10-blue)
-![Stars obtained](https://img.shields.io/badge/Stars%20Obtained%20⭐-19-yellow)
-![Days completed](https://img.shields.io/badge/Days%20Completed-10-green)
+![Current day](https://img.shields.io/badge/Day-11-blue)
+![Stars obtained](https://img.shields.io/badge/Stars%20Obtained%20⭐-20-yellow)
+![Days completed](https://img.shields.io/badge/Days%20Completed-11-green)
 
 | Day  | Title                 | Part 1 | Part 2 | Code                                         |
 |------|-----------------------|:------:|:------:|----------------------------------------------|
@@ -37,6 +37,7 @@ This repository contains solutions to Advent of Code puzzles. Solutions are all 
 | ✔ 08 | Resonant Collinearity |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2024/Day08.kt) |
 | ✔ 09 | Disk Fragmenter       |   ⭐    |        | [![Code]](src/main/kotlin/days2024/Day09.kt) |
 | ✔ 10 | Hoof It               |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2024/Day10.kt) |
+| ✔ 11 | Plutonian Pebbles     |   ⭐    |        | [![Code]](src/main/kotlin/days2024/Day11.kt) |
 
 ### Links
 

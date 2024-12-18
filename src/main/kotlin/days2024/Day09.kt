@@ -29,7 +29,7 @@ object Day09 : Day(2024, 9, "Disk Fragmenter", true) {
     }
 
     override fun partOne(): Any {
-//        return 1
+        return 1
         val blocks = mutableListOf<String>()
         val filesChunks = mutableListOf<String>()
 
@@ -40,7 +40,10 @@ object Day09 : Day(2024, 9, "Disk Fragmenter", true) {
     }
 
     override fun partTwo(): Any {
-//        return 2 //Not working
+//        return 2
+        // 108642932503
+        // 6239783302560
+        // 84231550994
 
         val blocks = mutableListOf<String>() /* Now each block is a file */
         val filesChunks = mutableListOf<Pair<Int, String>>()
@@ -48,7 +51,11 @@ object Day09 : Day(2024, 9, "Disk Fragmenter", true) {
         processBlocksBySingleFiles(blocks, filesChunks)
         compactBlocksBySingleFiles(blocks, filesChunks)
         println("Otro")
-        val myChecksum = getChecksum(blocks)
+//        println(r)
+        val finalList = blocks //.joinToString("") { it }.map { it.toString() }.toMutableList()
+        val r = p2(diskData.map { it.toString().toInt() }, finalList)
+        println("Other - " + calculateCheckSumP2(finalList.map { it.toIntOrNull() ?: 0 }))
+        val myChecksum = getChecksum(finalList)
         return myChecksum
     }
 
@@ -128,8 +135,8 @@ object Day09 : Day(2024, 9, "Disk Fragmenter", true) {
                     val spaceLength = blocks[spaceAvailableIndex].length
                     val remainingSpaces = spaceLength - chunk.first
                     repeat(chunk.first) {
-                        blocks.removeAt(spaceAvailableIndex + it)
                         blocks.add(spaceAvailableIndex + it, chunk.second.take(chunk.second.length / chunk.first))
+                        blocks.removeAt(spaceAvailableIndex + it)
                     }
                     blocks[chunkLastIndex] = SPACE.repeat(chunk.first)
                     if (remainingSpaces > 0) {
@@ -152,6 +159,152 @@ object Day09 : Day(2024, 9, "Disk Fragmenter", true) {
             checksum += (index * (digit.toIntOrNull() ?: 0)).toBigInteger()
         }
         return checksum
+    }
+
+
+    private fun p1(diskMap: List<Int>): BigInteger {
+        val (file, _) = generateFileWithPointers(diskMap)
+        val compactedFile = compactFileP1(file)
+        val checksum = calculateCheckSum(compactedFile)
+        return checksum
+    }
+
+    private fun p2(diskMap: List<Int>, finalList: MutableList<String>? = null): BigInteger {
+        val (file, pointers) = generateFileWithPointers(diskMap)
+        println(file.joinToString("") { it?.toString() ?: "." })
+        val compactedFile = compactFileP2(file, pointers)
+        println(compactedFile.joinToString("") { it?.toString() ?: "." })
+        val checksum1 = calculateCheckSumP2(compactedFile)
+        val checksum = getChecksum(compactedFile.map { it?.toString() ?: "." }.toMutableList())
+        println(finalList == compactedFile.map { it?.toString() ?: "." })
+        println(finalList?.map { it?.toString() ?: "." })
+        println(compactedFile.map { it?.toString() ?: "." })
+
+        //00000000011111110996..11111...2222222288888883333333..444444444..5555555557777...................................................
+        //00000000011111110996..11111...2222222288888883333333..444444444..5555555557777...................................................
+        return checksum + 2.toBigInteger()
+    }
+
+    private fun calculateCheckSum(compactedFile: List<Int?>): BigInteger {
+        var result: BigInteger = 0.toBigInteger()
+        var idx = 0
+        while (idx < compactedFile.size && compactedFile[idx] != null) {
+            val value = compactedFile[idx] ?: 0
+            result += value.toBigInteger() * idx.toBigInteger()
+//            println(result)
+            idx++
+        }
+        return result
+    }
+
+    private fun calculateCheckSumP2(compactedFile: List<Int?>): BigInteger {
+        var result: BigInteger = 0.toBigInteger()
+        var idx = 0
+        while (idx < compactedFile.size) {
+            val value = compactedFile[idx] ?: 0
+            result += value.toBigInteger() * idx.toBigInteger()
+//            println(result)
+            idx++
+        }
+        return result
+    }
+
+    private fun compactFileP1(file: List<Int?>): List<Int?> {
+        var pointer1: Int? = 0
+        var pointer2: Int? = file.size - 1
+        var result = file
+        pointer1 = nextSpace(result, pointer1!!)
+        pointer2 = previousNumber(result, pointer2!!)
+        while (pointer1 != null && pointer2 != null && pointer1 < pointer2) {
+            result = moveNumber(result, pointer1, pointer2)
+            pointer1 = nextSpace(result, pointer1)
+            pointer2 = previousNumber(result, pointer2)
+        }
+        return result
+    }
+
+    private fun compactFileP2(file: List<Int?>, pointers: List<Pair<Int, Int>>): List<Int?> {
+        val result = pointers.fold(file) { acc, pointer ->
+            val size = pointer.second
+            val positionToMove = acc.findConsecutiveNulls(size)
+
+            moveNumbers(acc, positionToMove, pointer.first, size)
+        }
+        return result
+    }
+
+    private fun findFirstPositionToMove(acc: List<Int?>, size: Int): Int? {
+        val result = acc.findConsecutiveNulls(size)
+        return result
+    }
+
+    fun List<Int?>.findConsecutiveNulls(count: Int): Int? {
+        return this
+            .windowed(count) // Create sliding windows of size `count`
+            .indexOfFirst { window -> window.all { it == null } } // Find the first window with all `null`s
+            .takeIf { it != -1 } // Return `null` if no such window is found
+    }
+
+    private fun moveNumbers(file: List<Int?>, pointer1: Int?, pointer2: Int, size: Int): List<Int?> {
+        return if (pointer1 == null || pointer2 < pointer1) {
+            file
+        } else {
+            (pointer1..(pointer1 + size - 1)).foldIndexed(file) { idx, result, pointer ->
+                moveNumber(result, pointer, pointer2 + idx)
+            }
+        }
+    }
+
+    private fun moveNumber(file: List<Int?>, pointer1: Int, pointer2: Int): List<Int?> {
+        val number = file[pointer2]
+        val result = file.replaceAt(pointer2, null).replaceAt(pointer1, number)
+        return result
+    }
+
+
+    private fun List<Int?>.replaceAt(offset: Int, value: Int?): List<Int?> =
+        this.take(offset) + value + drop(offset + 1)
+
+    private fun previousNumber(file: List<Int?>, pointer: Int): Int? {
+        var idx = pointer
+        while (idx > 0 && file[idx] == null) {
+            idx--
+        }
+        if (file[idx] != null) {
+            return idx
+        }
+        return null
+    }
+
+    private fun nextSpace(file: List<Int?>, pointer: Int): Int? {
+        var idx = pointer
+        while (idx < file.size - 1 && file[idx] != null) {
+            idx++
+        }
+        if (file[idx] == null) {
+            return idx
+        }
+        return null
+
+    }
+
+    private fun generateFileWithPointers(diskMap: List<Int>): Pair<List<Int?>, List<Pair<Int, Int>>> {
+        var id = 0
+        var idx = 0
+        val pointers = mutableListOf<Pair<Int, Int>>()
+        val result = mutableListOf<Int?>()
+        while (idx < diskMap.size) {
+            val fileSize = diskMap[idx]
+            val spaceSize = if (idx + 1 < diskMap.size) {
+                diskMap[idx + 1]
+            } else 0
+            pointers.add(result.size to fileSize)
+            result.addAll(List(fileSize) { id })
+            result.addAll(List(spaceSize) { null })
+            idx += 2
+            id++
+        }
+        return result to pointers.toList().reversed()
     }
 
 
