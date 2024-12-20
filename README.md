@@ -21,9 +21,9 @@ This repository contains solutions to Advent of Code puzzles. Solutions are all 
 
 ### Year 2024
 
-![Current day](https://img.shields.io/badge/Day-13-blue)
-![Stars obtained](https://img.shields.io/badge/Stars%20Obtained%20⭐-22-yellow)
-![Days completed](https://img.shields.io/badge/Days%20Completed-13-green)
+![Current day](https://img.shields.io/badge/Day-14-blue)
+![Stars obtained](https://img.shields.io/badge/Stars%20Obtained%20⭐-24-yellow)
+![Days completed](https://img.shields.io/badge/Days%20Completed-14-green)
 
 | Day  | Title                 | Part 1 | Part 2 | Code                                         |
 |------|-----------------------|:------:|:------:|----------------------------------------------|
@@ -39,7 +39,8 @@ This repository contains solutions to Advent of Code puzzles. Solutions are all 
 | ✔ 10 | Hoof It               |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2024/Day10.kt) |
 | ✔ 11 | Plutonian Pebbles     |   ⭐    |        | [![Code]](src/main/kotlin/days2024/Day11.kt) |
 | ✔ 12 | Garden Groups         |       |        | [![Code]](src/main/kotlin/days2024/Day12.kt) |
-| ✔ 13 | Claw Contraption      |   ⭐    |    ⭐   | [![Code]](src/main/kotlin/days2024/Day13.kt) |
+| ✔ 13 | Claw Contraption      |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2024/Day13.kt) |
+| ✔ 14 | Restroom Redoubt      |   ⭐    |   ⭐     | [![Code]](src/main/kotlin/days2024/Day14.kt) |
 
 ### Links
 

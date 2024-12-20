@@ -9,7 +9,7 @@ abstract class Day(val year: Int, val day: Int, val title: String, val debug: Bo
 
     open fun beforeParts(): Any = Unit
 
-    fun logLn(message: String = "") {
+    fun logLn(message: Any = "") {
         if (debug) {
             println(message)
         }
