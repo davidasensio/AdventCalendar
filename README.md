@@ -21,9 +21,9 @@ This repository contains solutions to Advent of Code puzzles. Solutions are all 
 
 ### Year 2024
 
-![Current day](https://img.shields.io/badge/Day-14-blue)
-![Stars obtained](https://img.shields.io/badge/Stars%20Obtained%20⭐-24-yellow)
-![Days completed](https://img.shields.io/badge/Days%20Completed-14-green)
+![Current day](https://img.shields.io/badge/Day-15-blue)
+![Stars obtained](https://img.shields.io/badge/Stars%20Obtained%20⭐-25-yellow)
+![Days completed](https://img.shields.io/badge/Days%20Completed-15-green)
 
 | Day  | Title                 | Part 1 | Part 2 | Code                                         |
 |------|-----------------------|:------:|:------:|----------------------------------------------|
@@ -40,7 +40,8 @@ This repository contains solutions to Advent of Code puzzles. Solutions are all 
 | ✔ 11 | Plutonian Pebbles     |   ⭐    |        | [![Code]](src/main/kotlin/days2024/Day11.kt) |
 | ✔ 12 | Garden Groups         |       |        | [![Code]](src/main/kotlin/days2024/Day12.kt) |
 | ✔ 13 | Claw Contraption      |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2024/Day13.kt) |
-| ✔ 14 | Restroom Redoubt      |   ⭐    |   ⭐     | [![Code]](src/main/kotlin/days2024/Day14.kt) |
+| ✔ 14 | Restroom Redoubt      |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2024/Day14.kt) |
+| ✔ 15 | Warehouse Woes        |   ⭐    |        | [![Code]](src/main/kotlin/days2024/Day15.kt) |
 
 ### Links
 
