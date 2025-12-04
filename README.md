@@ -24,14 +24,15 @@ This repository contains solutions to Advent of Code puzzles. Solutions are all 
 
 ### Year 2025
 
-![Current day](https://img.shields.io/badge/Day-2-blue)
-![Stars obtained](https://img.shields.io/badge/Stars%20Obtained%20⭐-4-yellow)
-![Days completed](https://img.shields.io/badge/Days%20Completed-2-green)
+![Current day](https://img.shields.io/badge/Day-3-blue)
+![Stars obtained](https://img.shields.io/badge/Stars%20Obtained%20⭐-5-yellow)
+![Days completed](https://img.shields.io/badge/Days%20Completed-3-green)
 
 | Day  | Title           | Part 1 | Part 2 | Code                                         |
 |------|-----------------|:------:|:------:|----------------------------------------------|
 | ✔ 01 | Secret Entrance |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2025/Day01.kt) |
 | ✔ 02 | Gift Shop       |   ⭐    |   ⭐    | [![Code]](src/main/kotlin/days2025/Day02.kt) |
+| ✔ 03 | Lobby           |   ⭐    |        | [![Code]](src/main/kotlin/days2025/Day03.kt) |
 
 
 
